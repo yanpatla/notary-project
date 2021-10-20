@@ -1,0 +1,165 @@
+.header-beginning {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  background-color: $withe;
+  box-shadow: 0px 1px 4px 0px #00000040;
+  padding: 2rem 0;
+}
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__contact {
+    display: flex;
+    gap: 3rem;
+    color: $gold;
+    @include telefono {
+      display: none;
+    }
+    &__email {
+      h3 {
+        font-weight: $bold;
+      }
+    }
+  }
+  &__top-left-side {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    @include telefono {
+      display: block;
+    }
+  }
+  &__contact-movile {
+    display: none;
+    @include telefono {
+      display: block;
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        padding: 0;
+        li {
+          width: 29px;
+          height: 28px;
+          background: linear-gradient(157.59deg, #b07537 17.6%, #f0b971 83.03%);
+          list-style: none;
+          border-radius: 100%;
+          text-align: center;
+          img {
+            vertical-align: middle;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+.header__main {
+  background-image: url("/img/image\ 35.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 2rem;
+  @include telefono {
+    background-image: url("/img/background-img-movile-01.jpg");
+  }
+  &__contact {
+    display: flex;
+    justify-content: space-between;
+
+    @include telefono {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    @include telefono {
+      &__image {
+        display: none;
+      }
+    }
+    &__image-movile {
+      display: none;
+      @include telefono {
+        display: inline;
+      }
+    }
+
+    &__information {
+      &__sentence {
+        margin-top: 3rem;
+        h3 {
+          color: $gold;
+          font-weight: $bold;
+          @include telefono {
+            text-align: center;
+          }
+        }
+      }
+      &__column {
+        display: flex;
+        gap: 6rem;
+        @include telefono{
+          justify-content: center;
+        }
+
+        ul {
+          padding: 0;
+        }
+        li {
+          font-weight: $semi-bold;
+          list-style: none;
+          line-height: 2.8rem;
+          @include telefono {
+            line-height: 3.6rem;
+          }
+        }
+      }
+      &__phone {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        margin-bottom: 5rem;
+        @include telefono {
+          flex-direction: column;
+        }
+        &__text {
+          @include telefono {
+            text-align: center;
+          }
+          p {
+            font-size: 2.8rem;
+            font-weight: $bold;
+            margin: 0;
+          }
+          p:last-child {
+            font-size: 2.3rem;
+            color: $gold;
+          }
+        }
+        &__numbers {
+          display: flex;
+          gap: 5rem;
+        }
+      }
+      &__email-movile {
+        display: none;
+      }
+      @include telefono {
+        &__email-movile {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 8rem;
+          .yellow-gradient {
+            width: 90vw;
+            height: 60px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

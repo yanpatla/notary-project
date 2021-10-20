@@ -1,0 +1,88 @@
+.address {
+  padding: 10rem 0;
+  background-image: url("/img/Image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include telefono{
+    background-image: url('/img/background-img-movile-02.jpg')
+  }
+  &__container {
+    @include grid(3, 2rem);
+  @include telefono{
+    padding-top: 6rem;
+    display: block;
+  }
+
+    background-color: $withe;
+    border-radius: 1rem;
+
+    &__text {
+      padding-top: 3rem;
+      padding-right: 7rem;
+      grid-column: 1/3;
+     
+      h2{
+          font-size: 5.2rem;
+        
+      }
+      &__sun {
+        position: relative;
+        img {
+          position: absolute;
+        left: 1;
+        top: -12rem;
+        }
+@include telefono{
+  img{
+    top: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+      }
+      @include telefono{
+     
+            h2{
+              text-align: center;
+            }
+            h4{
+              text-align: center;
+            }
+          padding: 0;
+        
+        p{
+          margin-right: 2rem;
+          font-size: 1.5rem;
+          line-height: 3rem
+        }
+      }
+    }
+    &__map {
+      grid-column: 3/4;
+      text-align: end;
+      &__button {
+        position: relative;
+        button {
+          position: absolute;
+          top: -2rem;
+          left: 12rem;
+          font-size: 1.6rem;
+          font-size: $semi-bold;
+        }
+        @include telefono{
+          display: none;
+         
+        }
+      }
+      @include telefono{
+        &__img{
+          text-align: center;
+        }
+      }
+     
+    }
+  }
+}

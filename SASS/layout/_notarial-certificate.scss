@@ -1,0 +1,77 @@
+.main{
+   
+    background-image: url('/img/image\ 34.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include telefono{
+        background-image: url('/img/background-img-movile-03.jpg');
+    }
+    
+    &__container{
+        padding: 3rem 0;
+    
+        
+    }
+}
+.main__container__certificade{
+    
+    display: flex;
+    justify-content: space-between;
+ 
+    &__img{
+      
+        img{
+            position: absolute;
+            left: -0;
+            top: 1;
+        }
+    }
+    &__img-movile{
+  display: none;
+     }
+    
+    @include telefono{
+        display: block;
+        &__img{
+      
+           display: none;
+        }
+        &__img-movile{
+      
+            img{
+                position: relative;
+                left: -0;
+                top: 10rem;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
+         }
+    }
+}
+.mian__container__certificade__column{
+    display: flex;
+    justify-content:space-between;
+    gap: 30vh;
+    @include telefono{
+        display: block;
+    }
+
+    ul {
+       @include telefono{
+           li{
+               p{
+                   font-size: 1.8rem;
+                   margin: 0;
+               }
+           }
+       }
+    
+        li::marker{
+           color: #323853;
+          font-size: 2.5rem;
+           
+        }
+    }
+}

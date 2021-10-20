@@ -1,0 +1,26 @@
+.certificates {
+  margin-top: 7rem;
+  text-align: center;
+  &__container {
+    @include grid(3, 2rem);
+    @include telefono {
+      @include grid(2, 1rem);
+    }
+    padding-bottom: 7rem;
+    &__types {
+      border: 1px solid #ebeaed;
+      border-radius: 1rem;
+      margin-top: 1.5rem;
+      h5 {
+        margin: 2rem 0;
+      }
+      &__img {
+        img {
+          border-top: 1rem solid #ebeaed;
+          border-top-left-radius: 1rem;
+          border-top-right-radius: 1rem;
+        }
+      }
+    }
+  }
+}

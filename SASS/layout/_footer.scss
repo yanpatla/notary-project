@@ -1,0 +1,129 @@
+.footer {
+  background-image: url("/img/img-footer.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include telefono {
+    background-image: url("/img/footer-movile.jpg");
+  }
+  &__container {
+    &__contact {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: $withe;
+      padding-top: 5rem;
+      @include telefono {
+        flex-direction: column;
+      }
+
+      &__column-one {
+        &__text {
+          p {
+            font-size: 2.8rem;
+            margin: 0;
+            font-weight: $bold;
+          }
+          p:last-child {
+            color: $gold;
+            font-size: 2.3rem;
+          }
+        }
+        &__phone {
+          display: flex;
+          gap: 2.5rem;
+          @include telefono {
+            flex-direction: column;
+            margin-top: 6rem;
+            .yellow-gradient {
+              width: 90vw;
+              display: inline-block;
+            }
+          }
+        }
+      }
+      &__column-two {
+        &__title {
+          h2:first-child {
+            font-size: 5.8rem;
+          }
+          @include telefono {
+            margin-bottom: 4rem;
+            &__email {
+              display: none;
+            }
+          }
+
+          &__subtitle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 2.5rem;
+            @include telefono {
+              display: none;
+            }
+
+            .dot {
+              height: 15px;
+              width: 15px;
+              background-color: #d80032;
+              border-radius: 50%;
+              display: inline-block;
+            }
+            p {
+              font-weight: 300;
+              font-size: 3.5rem;
+            }
+          }
+        }
+      }
+    }
+    &__list {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 8rem;
+      @include telefono{
+       @include grid(2,0)
+      }
+      ul {
+        li {
+          list-style: none;
+          color: $withe;
+          line-height: 26px;
+
+          h5 {
+            font-size: 1.6rem;
+            font-weight: 300;
+          }
+        }
+        li:first-child {
+          h5:first-child {
+            font-size: 1.8rem;
+            font-weight: $semi-bold;
+          }
+        }
+      }
+    }
+    &__places-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 5rem;
+      @include telefono{
+        @include grid(2,0)
+       }
+      ul {
+        li {
+          list-style: none;
+          color: $withe;
+          line-height: 26px;
+          h5 {
+            font-size: 1.6rem;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
